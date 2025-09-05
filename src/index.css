@@ -1,0 +1,169 @@
+.typing-test-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+  display: block;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.text-display {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  min-height: 150px;
+  border: 2px solid #e9ecef;
+}
+
+.char {
+  transition: all 0.2s ease;
+}
+
+.char.correct {
+  color: #28a745;
+  background-color: #d4edda;
+}
+
+.char.incorrect {
+  color: #dc3545;
+  background-color: #f8d7da;
+  text-decoration: underline;
+}
+
+.char.current {
+  background-color: #fff3cd;
+  border-left: 2px solid #ffc107;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-left-color: transparent; }
+}
+
+.typing-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  resize: none;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.typing-input:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.results {
+  background: #d4edda;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+}
+
+.results h2 {
+  color: #155724;
+  margin-bottom: 15px;
+}
+
+.instructions {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.restart-btn {
+  background: #007bff;
+  color: white;
+}
+
+.restart-btn:hover {
+  background: #0056b3;
+}
+
+.new-text-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.new-text-btn:hover {
+  background: #545b62;
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    gap: 15px;
+  }
+  
+  .stat {
+    min-width: 80px;
+    padding: 10px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+  
+  .text-display {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
